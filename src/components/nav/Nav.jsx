@@ -8,21 +8,27 @@ function Nav() {
       <nav>
         <div className={style.nav_container}>
           <div className={style.nav_title_wrapper}>
+          <NavLink
+              style={({ isActive }) =>
+                isActive ? { color: "white" } : undefined
+              }
+              to="/" >
             <img
               className={style.logo}
               src="https://files.codingninjas.in/pl-ninja-16706.svg"
               alt="logo"
             />
             <h4>E-Learning App</h4>
+            </NavLink>
           </div>
           <div className={style.nav_details}>
             <NavLink
               style={({ isActive }) =>
-                isActive ? { color: "blue" } : undefined
+                isActive ? { color: "white" } : undefined
               }
               to="/Courses"
             >
-            <button>Courses</button>
+            <h3>Courses</h3>
             </NavLink>
           </div>
         </div>
