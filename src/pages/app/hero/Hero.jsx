@@ -7,7 +7,7 @@ function Hero() {
       <section className={style.logo_wrapper}>
         <img
           className={style.logo}
-          src='https://files.codingninjas.in/pl-ninja-16706.svg'
+          src=''
           alt='logo'
         />
       </section>
