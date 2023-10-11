@@ -1,28 +1,34 @@
 import React from "react";
 import style from "./Nav.module.css";
-import { Outlet } from "react-router-dom";
+import { Outlet, NavLink } from "react-router-dom";
 
 function Nav() {
   return (
     <>
       <nav>
-      <div className={style.nav_container}>
-        <div className={style.nav_title_wrapper}>
-          <img
-            className={style.logo}
-            src="https://files.codingninjas.in/pl-ninja-16706.svg"
-            alt="logo"
-          />
-          <h4>E-Learning App</h4>
+        <div className={style.nav_container}>
+          <div className={style.nav_title_wrapper}>
+            <img
+              className={style.logo}
+              src="https://files.codingninjas.in/pl-ninja-16706.svg"
+              alt="logo"
+            />
+            <h4>E-Learning App</h4>
+          </div>
+          <div className={style.nav_details}>
+            <NavLink
+              style={({ isActive }) =>
+                isActive ? { color: "blue" } : undefined
+              }
+              to="/Courses"
+            >
+            <button>Courses</button>
+            </NavLink>
+          </div>
         </div>
-        <div className={style.nav_details}>
-          <button>Courses</button>
-        </div>
-      </div>
-    </nav>
-    <Outlet/>
+      </nav>
+      <Outlet />
     </>
-    
   );
 }
 
